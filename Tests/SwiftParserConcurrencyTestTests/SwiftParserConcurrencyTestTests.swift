@@ -9,7 +9,6 @@ final class SwiftParserConcurrencyTestTests: XCTestCase {
             .compactMap { $0 as? URL }
             .filter { $0.hasDirectoryPath == false }
             .filter { $0.pathExtension == "swift" }
-        print(allSymbols?.count)
         let manager = ParserManager()
         let combined: String = allSymbols!
             .compactMap({ file in
